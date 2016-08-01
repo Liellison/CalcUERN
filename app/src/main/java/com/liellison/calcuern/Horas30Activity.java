@@ -37,7 +37,7 @@ public class Horas30Activity extends Activity implements View.OnClickListener{
     public void onClick(View view) {
         n1 = Double.parseDouble(nota130.getText().toString());
         n2 = Double.parseDouble(nota230.getText().toString());
-        resultado = n1 + n2;
+        resultado = ((n1 * 4) + (n2 * 5)) / 9;
         text30.setText(String.valueOf(resultado));
 
     }
