@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.liellison.calcuern"
-        minSdkVersion 16
+        minSdkVersion 19
         targetSdkVersion 19
         versionCode 1
         versionName "0.0.2"
