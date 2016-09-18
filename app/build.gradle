@@ -17,6 +17,17 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    productFlavors {
+        free {
+            applicationId "com.liellison.calcuern.free"
+            buildConfigField "String","VARIAVEL_ESTATICA", "\"free\""
+        }
+        paid {
+            applicationId "com.liellison.calcuern.paid"
+            buildConfigField "String","VARIAVEL_ESTATICA", "\"paid\""
+
+        }
+    }
 }
 
 dependencies {
