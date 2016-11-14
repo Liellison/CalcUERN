@@ -34,5 +34,17 @@
         android:layout_below="@id/btCalc30"
         android:layout_centerHorizontal="true"
         android:id="@+id/text30"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Estou aqui"
+        android:layout_below="@id/text30"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/tvpreciso"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvpreciso"
+        android:id="@+id/btPreciso"/>
 
 </RelativeLayout>

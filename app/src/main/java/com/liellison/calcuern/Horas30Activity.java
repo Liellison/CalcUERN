@@ -15,9 +15,9 @@ import android.widget.TextView;
 
 public class Horas30Activity extends Activity implements View.OnClickListener{
     EditText nota130, nota230;
-    Button btCalc30;
-    TextView text30;
-    double n1, n2, resultado;
+    Button btCalc30, btPreciso;
+    TextView text30, tvpreciso;
+    double n1, n2, resultado, preciso;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,8 +28,18 @@ public class Horas30Activity extends Activity implements View.OnClickListener{
         nota230 = (EditText) findViewById(R.id.nota230);
         btCalc30 = (Button) findViewById(R.id.btCalc30);
         text30 = (TextView) findViewById(R.id.text30);
+        tvpreciso = (TextView) findViewById(R.id.tvpreciso);
 
         btCalc30.setOnClickListener(this);
+        btPreciso = (Button) findViewById(R.id.btPreciso);
+        btPreciso.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                n1 = Double.parseDouble(nota130.getText().toString());
+                preciso = ((n1 * 4)-63) / -5;
+                tvpreciso.setText(String.valueOf(preciso));
+            }
+        });
     }
 
     @Override
@@ -38,6 +48,7 @@ public class Horas30Activity extends Activity implements View.OnClickListener{
         n2 = Double.parseDouble(nota230.getText().toString());
         resultado = ((n1 * 4) + (n2 * 5)) / 9;
         text30.setText(String.valueOf(resultado));
+
 
     }
 }
