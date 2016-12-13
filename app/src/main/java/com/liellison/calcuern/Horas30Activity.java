@@ -13,11 +13,12 @@ import android.widget.TextView;
  * Implementacao do calculo para as disciplinas de 30h
  */
 
+@SuppressWarnings({"ALL", "ObjectEqualsNull"})
 public class Horas30Activity extends Activity implements View.OnClickListener{
     EditText nota130, nota230;
-    Button btCalc30, btPreciso;
-    TextView text30, tvpreciso;
-    double n1, n2, resultado, preciso;
+    Button btCalc30;
+    TextView text30;
+    double n1, n2, resultado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,28 +28,24 @@ public class Horas30Activity extends Activity implements View.OnClickListener{
         nota130 = (EditText) findViewById(R.id.nota130);
         nota230 = (EditText) findViewById(R.id.nota230);
         btCalc30 = (Button) findViewById(R.id.btCalc30);
-        text30 = (TextView) findViewById(R.id.text30);
-        tvpreciso = (TextView) findViewById(R.id.tvpreciso);
-
         btCalc30.setOnClickListener(this);
-        btPreciso = (Button) findViewById(R.id.btPreciso);
-        btPreciso.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                n1 = Double.parseDouble(nota130.getText().toString());
-                preciso = ((n1 * 4)-63) / -5;
-                tvpreciso.setText(String.valueOf(preciso));
-            }
-        });
+        text30 = (TextView) findViewById(R.id.text30);
     }
 
+    @SuppressWarnings("ObjectEqualsNull")
     @Override
     public void onClick(View view) {
+        //noinspection ObjectEqualsNull
+        if (nota230.getText().toString().equals(null)) {
         n1 = Double.parseDouble(nota130.getText().toString());
         n2 = Double.parseDouble(nota230.getText().toString());
         resultado = ((n1 * 4) + (n2 * 5)) / 9;
-        text30.setText(String.valueOf(resultado));
-
-
+        text30.setText("Sua media ficou " + String.valueOf(resultado));
+        }//noinspection ObjectEqualsNull
+        if (!nota230.getText().toString().equals(null)){
+            n1 = Double.parseDouble(nota130.getText().toString());
+            resultado = ((n1 * 4)-63) / -5;
+            text30.setText("Voce precisa tirar "+String.valueOf(resultado)+" na segunda prova para passar");
+        }
     }
 }

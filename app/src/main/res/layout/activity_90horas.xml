@@ -8,20 +8,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:inputType="numberDecimal"
         android:id="@+id/nota1"
-        android:text="Primeira nota"/>
+        android:hint="Primeira nota"/>
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
         android:layout_gravity="center_horizontal"
         android:id="@+id/nota2"
-        android:text="Segunda nota"/>
+        android:hint="Segunda nota"/>
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:inputType="numberDecimal"
         android:id="@+id/nota3"
-        android:text="Terceira nota"/>
+        android:hint="Terceira nota"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

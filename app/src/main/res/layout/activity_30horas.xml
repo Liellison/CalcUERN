@@ -14,12 +14,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:id="@+id/nota130"/>
+        android:inputType="numberDecimal"
+        android:id="@+id/nota130"
+        android:labelFor="@+id/nota130"/>
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
+        android:inputType="numberDecimal"
         android:id="@+id/nota230"
+        android:labelFor="@+id/nota230"
         android:layout_below="@id/nota130"/>
     <Button
         android:layout_width="match_parent"
@@ -34,17 +38,5 @@
         android:layout_below="@id/btCalc30"
         android:layout_centerHorizontal="true"
         android:id="@+id/text30"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Estou aqui"
-        android:layout_below="@id/text30"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/tvpreciso"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tvpreciso"
-        android:id="@+id/btPreciso"/>
 
 </RelativeLayout>
