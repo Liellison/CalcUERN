@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.liellison.calcuern.R;
+
+
 /**
  * Created by liellison on 27/06/16.
  *

@@ -3,10 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.liellison.calcuern.Horas30Activity"
     android:background="#004D40">
 
@@ -14,29 +10,42 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
         android:inputType="numberDecimal"
+        android:hint="@string/pNota"
         android:id="@+id/nota130"
-        android:labelFor="@+id/nota130"/>
+        android:labelFor="@+id/nota130"
+        android:textColorHint="#fff000"
+        android:backgroundTint="#fff000"
+        android:textColor="#FF4081"/>
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:inputType="numberDecimal"
         android:id="@+id/nota230"
+        android:hint="@string/sNota"
         android:labelFor="@+id/nota230"
-        android:layout_below="@id/nota130"/>
+        android:layout_below="@id/nota130"
+        android:textColorHint="#fff000"
+        android:backgroundTint="#fff000"
+        android:textColor="#FF4081"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
+        android:text="@string/calc"
+        android:background="#FF4081"
+        android:textColor="#004D40"
+        android:layout_margin="16dp"
         android:layout_below="@id/nota230"
         android:id="@+id/btCalc30"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Estou aqui"
         android:layout_below="@id/btCalc30"
         android:layout_centerHorizontal="true"
-        android:id="@+id/text30"/>
+        android:id="@+id/text30"
+        android:textColor="#fff000"/>
 
 </RelativeLayout>

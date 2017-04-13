@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">CalcUERN</string>
+
+    <!-- Strings dos buttons -->
+    <string name="bt90">Disciplina de 90h/60h</string>
+    <string name="bt30">Disciplina de 30h</string>
+    <string name="calc">Calcular</string>
+
+    <!-- Strings dos textviews -->
+    <string name="pNota">Primeira nota</string>
+    <string name="sNota">Segunda nota</string>
+    <string name="tNota">Terceira nota</string>
+
 </resources>

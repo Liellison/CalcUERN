@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#004D40">
 
@@ -10,31 +11,47 @@
         android:layout_gravity="center_horizontal"
         android:inputType="numberDecimal"
         android:id="@+id/nota1"
-        android:hint="Primeira nota"/>
+        android:hint="@string/pNota"
+        android:layout_marginTop="24dp"
+        android:textColorHint="#fff000"
+        android:backgroundTint="#fff000"
+        android:textColor="#FF4081"/>
+
     <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:layout_gravity="center_horizontal"
         android:id="@+id/nota2"
-        android:hint="Segunda nota"/>
-    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:hint="@string/sNota"
         android:inputType="numberDecimal"
+        android:textColorHint="#fff000"
+        android:backgroundTint="#fff000"
+        android:textColor="#FF4081"/>
+
+    <EditText
         android:id="@+id/nota3"
-        android:hint="Terceira nota"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textColorHint="#fff000"
+        android:backgroundTint="#fff000"
+        android:hint="@string/tNota"
+        android:inputType="numberDecimal"
+        android:textColor="#FF4081"/>
     <Button
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Calcular"
-        android:id="@+id/btCalc90"/>
+        android:layout_height="55dp"
+        android:text="@string/calc"
+        android:id="@+id/btCalc90"
+        android:layout_margin="16dp"
+        android:background="#FF4081"
+        android:textColor="#004D40"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Estou aqui"
         android:layout_gravity="center"
-        android:id="@+id/text90"/>
+        android:id="@+id/text90"
+        android:layout_marginTop="16dp"
+        android:textColor="#fff000"/>
 
 </LinearLayout>

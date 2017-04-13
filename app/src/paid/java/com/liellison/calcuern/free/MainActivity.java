@@ -3,6 +3,8 @@ package com.liellison.calcuern.free;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 
+import com.liellison.calcuern.R;
+
 public class MainActivity extends ActionBarActivity {
 
     @Override

@@ -13,7 +13,6 @@ import android.widget.TextView;
  * Implementacao do calculo para as disciplinas de 30h
  */
 
-@SuppressWarnings({"ALL", "ObjectEqualsNull"})
 public class Horas30Activity extends Activity implements View.OnClickListener{
     EditText nota130, nota230;
     Button btCalc30;
@@ -32,17 +31,19 @@ public class Horas30Activity extends Activity implements View.OnClickListener{
         text30 = (TextView) findViewById(R.id.text30);
     }
 
-    @SuppressWarnings("ObjectEqualsNull")
     @Override
     public void onClick(View view) {
-        //noinspection ObjectEqualsNull
-        if (nota230.getText().toString().equals(null)) {
-        n1 = Double.parseDouble(nota130.getText().toString());
-        n2 = Double.parseDouble(nota230.getText().toString());
-        resultado = ((n1 * 4) + (n2 * 5)) / 9;
-        text30.setText("Sua media ficou " + String.valueOf(resultado));
-        }//noinspection ObjectEqualsNull
-        if (!nota230.getText().toString().equals(null)){
+        String notaSe = nota230.getText().toString();
+        if (!notaSe.equals("")) {
+            n1 = Double.parseDouble(nota130.getText().toString());
+            n2 = Double.parseDouble(nota230.getText().toString());
+            resultado = ((n1 * 4) + (n2 * 5)) / 9;
+            if (resultado < 7){
+                text30.setText("Voce reprovou,tua nota foi "+String.valueOf(resultado));
+            }else {
+                text30.setText("Tua nota foi "+String.valueOf(resultado));
+            }
+        }else {
             n1 = Double.parseDouble(nota130.getText().toString());
             resultado = ((n1 * 4)-63) / -5;
             text30.setText("Voce precisa tirar "+String.valueOf(resultado)+" na segunda prova para passar");
